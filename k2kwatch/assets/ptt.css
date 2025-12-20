@@ -1,0 +1,18 @@
+
+.player-crop{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  border-radius: 1rem;
+}
+
+.player-crop iframe{
+  position: absolute;
+  top: -160px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 260px);
+  border: 0;
+}
