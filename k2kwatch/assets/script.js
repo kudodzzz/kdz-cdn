@@ -1,16 +1,15 @@
 // (c) 2025 Copyright by Kudodzzz.
-// GitHub: https://github.com/kudodzzz/watch
+// GitHub: https://github.com/kudodzzz/kdz-cdn
 
-//force https immediately
 (() => {
-  const isLocalhost = (
-    location.hostname === 'localhost' ||
-    location.hostname === '127.0.0.1' ||
-    location.hostname === '::1' ||
-    location.hostname.endsWith('.local')
-  );
+  const targetDomain = 'watch.kdz.ct.ws';
 
-  if (location.protocol === 'http:' && !isLocalhost) {
+
+  if (
+    location.hostname === targetDomain &&
+    location.protocol === 'http:' &&
+    !isLocalhost
+  ) {
     location.replace(
       'https://' +
       location.host +
@@ -21,7 +20,6 @@
   }
 })();
 
-//disable scroll while loading
 document.documentElement.style.overflow = 'hidden';
 
 document.addEventListener('DOMContentLoaded', () => {
