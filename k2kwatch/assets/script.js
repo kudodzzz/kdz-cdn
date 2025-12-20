@@ -1,10 +1,25 @@
 // (c) 2025 Copyright by Kudodzzz.
-// GitHub: https://github.com/kudodzzz/K2KWatch
+// GitHub: https://github.com/kudodzzz/watch
 
 //force https immediately
-if (location.protocol === 'http:') {
-  location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-}
+(() => {
+  const isLocalhost = (
+    location.hostname === 'localhost' ||
+    location.hostname === '127.0.0.1' ||
+    location.hostname === '::1' ||
+    location.hostname.endsWith('.local')
+  );
+
+  if (location.protocol === 'http:' && !isLocalhost) {
+    location.replace(
+      'https://' +
+      location.host +
+      location.pathname +
+      location.search +
+      location.hash
+    );
+  }
+})();
 
 //disable scroll while loading
 document.documentElement.style.overflow = 'hidden';
